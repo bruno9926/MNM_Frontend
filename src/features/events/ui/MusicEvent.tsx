@@ -11,9 +11,9 @@ function MusicEvent({ event }: MusicEventProps) {
         <img src={event.imageUrl} alt={event.id} className='w-full h-full object-center object-cover'/>
       </div>
       <div className="p-4 flex flex-col gap-2">
-        <p className="text-sm transition-colors group-hover:text-secondary-foreground">{event.date}</p>
-        <h3 className="text-xl font-semibold transition-colors group-hover:text-secondary-foreground">{event.name}</h3>
-        <p className="text-sm transition-colors group-hover:text-secondary-foreground">
+        <p className="text-base transition-colors group-hover:text-secondary-foreground">{event.date}</p>
+        <h3 className="text-2xl font-semibold transition-colors group-hover:text-secondary-foreground">{event.name}</h3>
+        <p className="text-base transition-colors group-hover:text-secondary-foreground">
           {event.venue}, {event.city}
         </p>
       </div>
