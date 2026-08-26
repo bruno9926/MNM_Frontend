@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router'
+import { routes } from '../app/routes/routes'
 import NearMusicEvents from '../features/events/ui/NearMusicEvents'
 import Button from '../shared/ui/atoms/Button'
 
@@ -14,6 +16,8 @@ function Home() {
 }
 
 function Hero() {
+  const navigate = useNavigate()
+
   return (
     <div className="border border-border grid grid-cols-1 md:grid-cols-3">
       <div className="md:col-span-2 p-4 pb-10">
@@ -22,7 +26,7 @@ function Hero() {
       </div>
       <div className="bg-secondary p-6 pt-8 md:pt-15 flex flex-col gap-4">
         <p className="text-secondary-foreground text-xl md:text-2xl font-medium">Descubre conciertos, artistas y eventos de la escena local.</p>
-        <Button>Explorar Eventos</Button>
+        <Button onClick={() => navigate(routes.EVENTS)}>Explorar Eventos</Button>
         <Button>Publicar un Evento</Button>
       </div>
     </div>
