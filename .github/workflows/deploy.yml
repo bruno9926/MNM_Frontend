@@ -33,11 +33,17 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Debug GitHub identity
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Ref: $GITHUB_REF"
+          echo "Event: $GITHUB_EVENT_NAME"
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::448795058116:role/MNM-GitHub-Deploy
           aws-region: us-east-2
-          
+
       - name: Test AWS authentication
         run: aws sts get-caller-identity
