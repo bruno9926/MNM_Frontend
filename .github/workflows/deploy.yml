@@ -41,3 +41,9 @@ jobs:
 
       - name: Test AWS authentication
         run: aws sts get-caller-identity
+      
+      - name: Deploy to S3
+        run: aws s3 sync dist/ s3://mnm-frontend-prod-2026 --delete
+
+      - name: Invalidate CloudFront cache
+        run: aws cloudfront create-invalidation --distribution-id EDFX7JH31VO3Q --paths "/index.html"
