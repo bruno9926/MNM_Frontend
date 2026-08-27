@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router'
+import { routes } from '../../../app/routes/routes'
 import type { MusicEvent as MusicEventType } from '../model/musicEvent'
 
 type MusicEventProps = {
@@ -5,8 +7,13 @@ type MusicEventProps = {
 }
 
 function MusicEvent({ event }: MusicEventProps) {
+  const navigate = useNavigate()
+
   return (
-    <div className="group bg-card overflow-hidden flex flex-col shrink-0 w-80 cursor-pointer transition hover:bg-secondary hover:scale-105">
+    <div
+      onClick={() => navigate(`${routes.EVENTS}/${event.id}`)}
+      className="group bg-card overflow-hidden flex flex-col shrink-0 w-80 cursor-pointer transition hover:bg-secondary hover:scale-105"
+    >
       <div className="h-70 bg-muted transition-colors group-hover:bg-secondary relative overflow-hidden">
         <img src={event.imageUrl} alt={event.id} className='w-full h-full object-center object-cover'/>
       </div>
