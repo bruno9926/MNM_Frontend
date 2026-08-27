@@ -1,5 +1,12 @@
+import BackButton from '../shared/ui/atoms/BackButton'
+
 function EventDetail() {
-  return <div></div>
+  return (
+    <div className="page-padding py-10">
+      <BackButton />
+      <h1 className="text-4xl sm:text-6xl lg:text-[70px] heroic-font pb-6 pt-4">Detalle del Evento</h1>
+    </div>
+  )
 }
 
 export default EventDetail
