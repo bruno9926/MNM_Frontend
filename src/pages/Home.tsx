@@ -19,7 +19,7 @@ function Hero() {
   const navigate = useNavigate()
 
   return (
-    <div className="border border-border grid grid-cols-1 md:grid-cols-3">
+    <div className="border grid grid-cols-1 md:grid-cols-3">
       <div className="md:col-span-2 p-4 pb-10">
         <h1 className="text-5xl sm:text-8xl lg:text-gigantic font-semibold text-primary heroic-font">MUSIC NEAR ME</h1>
         <h2 className="text-lg sm:text-xl font-extralight">La musica que esta sonando cerca de ti</h2>

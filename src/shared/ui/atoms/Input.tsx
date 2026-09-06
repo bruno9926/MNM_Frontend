@@ -1,13 +1,14 @@
 import type { InputHTMLAttributes } from 'react'
+import { cn } from '../../lib/cn'
 import type { Icon } from '../icons'
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   icon?: Icon
 }
 
-function Input({ className = '', type = 'text', placeholder = '', icon: Icon, ...props }: InputProps) {
+function Input({ className, type = 'text', placeholder = '', icon: Icon, ...props }: InputProps) {
   return (
-    <div className={`relative w-full ${className}`}>
+    <div className={cn('relative w-full', className)}>
       {Icon && (
         <Icon
           size={20}
@@ -17,7 +18,10 @@ function Input({ className = '', type = 'text', placeholder = '', icon: Icon, ..
       <input
         type={type}
         placeholder={placeholder}
-        className={`w-full rounded-full border border-border bg-transparent p-4 px-6 text-foreground outline-none placeholder:text-muted-foreground focus:border-foreground transition-colors ${Icon ? 'pl-14' : ''}`}
+        className={cn(
+          'w-full rounded-full border bg-transparent p-4 px-6 text-foreground outline-none placeholder:text-muted-foreground focus:border-foreground transition-colors',
+          Icon && 'pl-14',
+        )}
         {...props}
       />
     </div>

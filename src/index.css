@@ -47,7 +47,7 @@
   --muted: #24242D;
   --muted-foreground: #9A9AA5;
 
-  --accent: #634fd1;
+  --accent: #b9b3dd;
   --accent-foreground: #15151A;
 
   --destructive: #F0506E;
@@ -102,6 +102,12 @@
 
   @media (width >=theme(--breakpoint-lg)) {
     padding-inline: 4rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border box-border;
   }
 }
 
