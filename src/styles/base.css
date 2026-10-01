@@ -1,0 +1,17 @@
+@layer base {
+  * {
+    @apply border-border box-border;
+  }
+
+  body {
+    margin: 0;
+    /* Without min-height, the gradient tiles on short pages and leaves a visible seam. */
+    min-height: 100dvh;
+    background: var(--background-gradient);
+    color: var(--color-foreground);
+
+    font-family: "Trispace", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
