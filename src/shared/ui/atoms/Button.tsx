@@ -3,7 +3,7 @@ import type { ButtonHTMLAttributes } from 'react'
 import { cn } from '../../lib/cn'
 
 const buttonVariants = cva(
-  'p-3 px-4 sm:p-4 sm:px-6 rounded-4xl w-fit cursor-pointer transition-colors hover:bg-accent hover:text-accent-foreground',
+  'p-3 px-4 sm:p-4 sm:px-6 rounded-4xl w-fit cursor-pointer transition hover:bg-accent hover:text-accent-foreground motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0',
   {
     variants: {
       variant: {

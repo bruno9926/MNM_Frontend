@@ -17,7 +17,7 @@
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
 
-  /* Placeholder: reemplazar por el color de marca cuando lo tengan. */
+  /* Placeholder: replace with the brand color once it's defined. */
   --accent: oklch(0.6 0.19 260);
   --accent-foreground: oklch(0.985 0 0);
 
@@ -29,33 +29,38 @@
   --ring: oklch(0.6 0.19 260);
 
   --radius: 0.5rem;
+
+  --gradient-brand: linear-gradient(in oklch to bottom right, var(--primary) 10%, var(--accent) 65%, var(--secondary));
+  --gradient-brand-strong: linear-gradient(in oklch to bottom right, var(--primary) 30%, var(--secondary));
+
+  --background-gradient: linear-gradient(to bottom, #fff, #000);
 }
 
 .dark {
-  --background: #15151A;
-  --foreground: #c1c1c1;
+  --background: #1f212c;
+  --background-gradient: linear-gradient(to bottom, var(--background), #101114);
+  --foreground: #E4E5EC;
 
-  --card: #1C1C23;
-  --card-foreground: #F5F5F5;
+  --card: #2D3142;
+  --card-foreground: #F5F5F8;
 
-  --primary: #fb6436;
-  --primary-foreground: #15151A;
+  --primary: #f74050;
+  --primary-foreground: #171923;
 
-  --secondary: #aea6dd;
-  --secondary-foreground: #15151A;
+  --secondary: #8B8BFF;
+  --secondary-foreground: #171923;
 
-  --muted: #24242D;
-  --muted-foreground: #9A9AA5;
+  --muted: #343849;
+  --muted-foreground: #9EA2B8;
 
-  --accent: #b9b3dd;
-  --accent-foreground: #15151A;
+  --accent: #c092e4;
+  --accent-foreground: #171923;
 
-  --destructive: #F0506E;
-  --destructive-foreground: #F5F5F5;
+  --destructive-foreground: #171923;
 
-  --border: #2E2E38;
-  --input: #2E2E38;
-  --ring: #ff916f;
+  --border: #3E4357;
+  --input: #3E4357;
+  --ring: #8B8BFF;
 }
 
 @theme inline {
@@ -113,11 +118,13 @@
 
 body {
   margin: 0;
-  background: var(--color-background);
+  /* Without min-height, the gradient tiles on short pages and leaves a visible seam. */
+  min-height: 100dvh;
+  background: var(--background-gradient);
   color: var(--color-foreground);
 
   font-family: "Trispace", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -125,6 +132,17 @@ body {
   font-family: "BBH Bartle", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@utility bg-brand-gradient {
+  background-image: var(--gradient-brand);
+}
+
+@utility text-brand-gradient-strong {
+  background-image: var(--gradient-brand-strong);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 @utility scrollbar-thin {

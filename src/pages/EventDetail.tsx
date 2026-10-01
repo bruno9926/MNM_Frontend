@@ -28,7 +28,7 @@ const lineUpArtists: LineUpArtistData[] = [
 
 function EventDetail() {
   return (
-    <div className='page grid grid-cols-1 md:grid-cols-2 border '>
+    <div className='grid grid-cols-1 md:grid-cols-2 border '>
       {/** Event Images */}
       <CoverImage src="/bandalos-concierto.jpg" alt="Bandalos Chinos en concierto" />
       {/** Event Info */}
