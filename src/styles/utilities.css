@@ -27,6 +27,24 @@
   color: transparent;
 }
 
+/* Brand duotone for decorative photos: the image keeps only its luminosity,
+   the hue comes from the brand gradient behind it. Apply to the image's wrapper. */
+@utility duotone {
+  isolation: isolate;
+  background-image: var(--gradient-brand);
+
+  & img {
+    mix-blend-mode: luminosity;
+  }
+}
+
+@utility text-brand-gradient {
+  background-image: var(--gradient-brand);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 @utility scrollbar-thin {
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;

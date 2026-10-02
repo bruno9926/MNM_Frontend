@@ -30,12 +30,12 @@
   --gradient-brand: linear-gradient(in oklch to bottom right, var(--primary) 10%, var(--accent) 65%, var(--secondary));
   --gradient-brand-strong: linear-gradient(in oklch to bottom right, var(--primary) 30%, var(--secondary));
 
-  --background-gradient: linear-gradient(to bottom, #fff, #000);
+  --background-deep: #000;
+  --background-gradient: linear-gradient(to bottom, var(--background), var(--background-deep));
 }
 
 .dark {
   --background: #1f212c;
-  --background-gradient: linear-gradient(to bottom, var(--background), #101114);
   --foreground: #E4E5EC;
 
   --card: #2D3142;
@@ -58,4 +58,6 @@
   --border: #3E4357;
   --input: #3E4357;
   --ring: #8B8BFF;
+
+  --background-deep: #101114;
 }
