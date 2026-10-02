@@ -3,6 +3,7 @@ import NearMusicEvents from '../features/events/ui/NearMusicEvents'
 import NearbyEventsStrip from '../features/events/ui/NearbyEventsStrip'
 import FeaturedStory from '../shared/ui/components/FeaturedStory'
 import NavigationButton from '../shared/ui/atoms/NavigationButton'
+import EmergingArtists from '../features/artists/ui/EmergingArtists'
 
 function Home() {
   return (
@@ -16,7 +17,7 @@ function Home() {
         imageUrl="/hero.jpg"
         to={routes.EVENTS}
       />
-      <NearMusicEvents />
+      <EmergingArtists />
     </div>
   )
 }

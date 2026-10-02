@@ -18,6 +18,7 @@ function AppRoutes() {
           <Route path={routes.PUBLISH_EVENT} element={<PublishEvent />} />
           <Route path={`${routes.EVENTS}/:id`} element={<EventDetail />} />
           <Route path={routes.ARTISTS} element={<Artist />} />
+          <Route path={`${routes.ARTISTS}/:id`} element={<Artist />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
