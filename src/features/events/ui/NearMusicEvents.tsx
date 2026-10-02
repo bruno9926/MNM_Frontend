@@ -7,8 +7,8 @@ function NearMusicEvents() {
   return (
     <section className="page-padding py-20">
       <SectionHeader
-        title="Eventos cercanos"
-        label="Lo que suena esta semana"
+        title="Esta Semana"
+        label="Programate desde ya"
         link={{ to: routes.EVENTS, label: 'Ver todos' }}
         className="mb-4"
       />

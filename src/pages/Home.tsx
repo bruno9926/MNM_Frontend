@@ -26,7 +26,7 @@ function Hero() {
     <div className="border grid grid-cols-1 md:grid-cols-3">
       <div className="md:col-span-2 p-4 pb-10 overflow-hidden page-padding">
         <h1 className="text-5xl sm:text-8xl lg:text-gigantic w-fit font-semibold text-brand-gradient-strong heroic-font">MUSIC NEAR ME</h1>
-        <p className="text-sm sm:text-base uppercase tracking-[0.3em] font-medium text-secondary mb-4">La musica que esta sonando cerca de ti</p>
+        <p className="text-sm sm:text-base uppercase tracking-[0.3em] font-medium text-secondary mb-4">La música que está sonando cerca de vos</p>
       </div>
       <div className="bg-secondary text-secondary-foreground flex flex-col gap-4 justify-between">
         <div className='p-6 pt-8 md:p-10 md:pt-15'>

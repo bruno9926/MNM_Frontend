@@ -41,7 +41,7 @@ function EventDetail() {
           <EventInfoGrid.Item label='LUGAR' value='Niceto Club' detail='Niceto Vega 5510, CABA' />
           <EventInfoGrid.Item label='ENTRADAS' value='Desde $18.000' detail='Últimas 40 disponibles' />
           <EventInfoGrid.Item label='EDAD' value='+ 18' />
-          <EventInfoGrid.Item label='DURACION' value='~2 h 30 min' />
+          <EventInfoGrid.Item label='DURACIÓN' value='~2 h 30 min' />
         </EventInfoGrid>
 
         <div className='pt-10 flex gap-4'>

@@ -19,7 +19,7 @@ function Footer() {
               required
               type="email"
               aria-label="Correo electrónico"
-              placeholder="tu correo electronico"
+              placeholder="tu correo electrónico"
               className="flex-1 px-6 placeholder:text-secondary-foreground/80" />
             <button
               type="submit"
