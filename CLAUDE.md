@@ -17,10 +17,12 @@ There is no test runner configured yet (no test script, no Vitest/Jest dependenc
 
 ## Architecture
 
-MNM ("Music Near Me") is a React 19 + TypeScript SPA on Vite, styled with Tailwind CSS v4 (CSS-first config, no `tailwind.config.js` — configured via the `@tailwindcss/vite` plugin in `vite.config.ts`). There's no router or data-fetching/state library yet: `App.tsx` renders `pages/Home.tsx` directly, and data is local mock arrays.
+MNM ("Music Near Me") is a React 19 + TypeScript SPA on Vite, styled with Tailwind CSS v4 (CSS-first config, no `tailwind.config.js` — configured via the `@tailwindcss/vite` plugin in `vite.config.ts`). Routing uses `react-router` (`src/app/routes/AppRoutes.tsx`, with path tokens in `routes.ts`; all pages except `NotFound` sit under a pathless `MainLayout` route). There's no data-fetching/state library yet: data is local mock arrays.
 
 **Folder convention** (feature-sliced-design-like — follow this for new UI rather than inventing a new layout):
-- `src/shared/ui/atoms/` — generic, app-wide reusable UI primitives (e.g. `Button.tsx`).
+- `src/shared/ui/atoms/` — generic, app-wide reusable UI primitives (e.g. `Button.tsx`, `NavigationButton.tsx`).
+- `src/shared/ui/components/` — larger reusable UI blocks composed from atoms that don't carry enough domain weight to be a feature (e.g. `FeaturedStory.tsx`: photo + title + description + "Leer Historia" link, content passed via props).
+- `src/shared/ui/layout/` — app shell: `MainLayout` (navbar + `<Outlet />` + footer), `NavBar`, `Footer`.
 - `src/features/{feature}/ui/` and `src/features/{feature}/model/` — feature-specific components and types. E.g. the `events` feature has `ui/MusicEvent.tsx` (a presentational event card) and `ui/NearMusicEvents.tsx` (composes mock data + renders a horizontally-scrolling list of `MusicEvent` cards), with the `MusicEvent` type in `model/musicEvent.ts`. The type is named `MusicEvent`, not `Event`, specifically to avoid shadowing the DOM's global `Event` type.
 - `src/pages/` — page-level components that compose features into a full screen (e.g. `Home.tsx`), wired into `App.tsx`.
 
