@@ -1,5 +1,6 @@
 import { routes } from '../app/routes/routes'
 import NearMusicEvents from '../features/events/ui/NearMusicEvents'
+import NearbyEventsStrip from '../features/events/ui/NearbyEventsStrip'
 import FeaturedStory from '../shared/ui/components/FeaturedStory'
 import NavigationButton from '../shared/ui/atoms/NavigationButton'
 
@@ -8,6 +9,7 @@ function Home() {
     <div>
       <Hero />
       <NearMusicEvents />
+      <NearbyEventsStrip />
       <FeaturedStory
         title="CALI SUENA DURO"
         description="Un recorrido por la escena musical de Cali, sus espacios, su gente, y todo lo que la hace vibrar."
