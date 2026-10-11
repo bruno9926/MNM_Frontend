@@ -5,7 +5,7 @@ import ArtistCard from './ArtistCard'
 
 function EmergingArtists() {
   return (
-    <section className="page-padding py-20">
+    <section className="page-padding py-10 sm:py-14 lg:py-20">
       <SectionHeader
         title="Artistas emergentes"
         label="Quienes la están rompiendo"

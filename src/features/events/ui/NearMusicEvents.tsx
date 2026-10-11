@@ -5,7 +5,7 @@ import MusicEvent from './MusicEvent'
 
 function NearMusicEvents() {
   return (
-    <section className="page-padding py-20">
+    <section className="page-padding py-10 sm:py-14 lg:py-20">
       <SectionHeader
         title="Esta Semana"
         label="Programate desde ya"

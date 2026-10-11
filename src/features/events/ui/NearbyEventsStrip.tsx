@@ -21,15 +21,16 @@ const nearbyEvents: NearbyEvent[] = [
 function NearbyEventsStrip() {
   return (
     <section className='bg-secondary page-padding py-8 text-secondary-foreground'>
-      <div className='flex gap-4 items-center'>
-        <h2 className='heroic-font text-5xl'>CERCA TUYO</h2>
-        <span className='border-t flex-1 mx-5' />
-        <Link to={routes.EVENTS} className='flex gap-4'>
+      <div className='flex flex-wrap gap-x-4 gap-y-2 items-center'>
+        <h2 className='heroic-font text-[clamp(1rem,6vw,2.25rem)] lg:text-5xl leading-none'>CERCA TUYO</h2>
+        <span className='hidden sm:block border-t flex-1 mx-5' />
+        <Link to={routes.EVENTS} className='ml-auto flex gap-4 whitespace-nowrap'>
           MIRÁ MÁS
           <icon.arrowRight size={20} />
         </Link>
       </div>
-      <ul className='flex mt-8 divide-secondary-foreground divide-x'>
+      {/* Items never shrink below their content, so the row scrolls sideways whenever they don't all fit */}
+      <ul className='flex mt-8 pb-4 lg:pb-0 overflow-x-auto scrollbar-thin divide-secondary-foreground divide-x'>
         {nearbyEvents.map((event) => (
           <NearbyEventItem key={event.id} event={event} />
         ))}
@@ -44,7 +45,7 @@ type NearbyEventItemProps = {
 
 function NearbyEventItem({ event }: NearbyEventItemProps) {
   return (
-    <li className='group flex gap-6 flex-1 motion-safe:hover:flex-3 transition-[flex-grow] cursor-pointer justify-center px-5'>
+    <li className='group flex gap-6 flex-1 motion-safe:hover:flex-3 transition-[flex-grow] cursor-pointer justify-center px-5 max-lg:first:pl-0'>
       <div className='flex flex-col'>
         <span className='font-light'>{event.month}</span>
         <span className='font-bold text-2xl'>{event.day}</span>

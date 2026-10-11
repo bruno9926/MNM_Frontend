@@ -11,13 +11,15 @@ function Home() {
       <Hero />
       <NearMusicEvents />
       <NearbyEventsStrip />
+      
       <FeaturedStory
         title="CALI SUENA DURO"
         description="Un recorrido por la escena musical de Cali, sus espacios, su gente, y todo lo que la hace vibrar."
         imageUrl="/hero.jpg"
         to={routes.EVENTS}
       />
-      <EmergingArtists />
+     
+      <EmergingArtists /> 
     </>
   )
 }
