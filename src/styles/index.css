@@ -38,6 +38,6 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --text-gigantic: 150px;
+  --text-gigantic: 140px;
   --text-gigantic--line-height: 1;
 }

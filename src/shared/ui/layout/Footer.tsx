@@ -2,7 +2,7 @@ import { icon } from "../icons"
 
 function Footer() {
   return (
-    <footer className='w-full bg-secondary text-secondary-foreground flex flex-col lg:flex-row'>
+    <footer className='w-full bg-secondary text-secondary-foreground flex flex-col md:flex-row'>
       <div className="flex flex-1 flex-col xl:flex-row items-start xl:items-center gap-4 p-3 pt-8 sm:p-6 xl:p-0 xl:pr-6">
 
         <div className="flex items-center gap-2 sm:gap-4 md:gap-8">
@@ -34,7 +34,7 @@ function Footer() {
 
       </div>
 
-      <div className="p-3 sm:p-6 lg:p-8 border-t lg:border-l-2 lg:border-t-0 flex flex-col justify-center">
+      <div className="p-3 sm:p-6 md:p-8 border-t md:border-l-2 md:border-t-0 flex flex-col justify-center">
         <img src="/mnm.png" alt="" className='w-40' />
         <span className="font-bold heroic-font tracking-[0.3em]">MNM</span>
         <span>MUSIC NEAR ME</span>
